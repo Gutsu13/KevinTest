@@ -1,0 +1,4 @@
+services:
+#    wm_film.example:
+#        class: WM\FilmBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

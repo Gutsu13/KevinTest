@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body {text-align: center;}
+        table, td {margin: 0 auto; border: 1px solid black; border-collapse: collapse;}
+        #ajout {margin: auto; width: 10%; border: 2px solid red}
+    </style>
+    <title>Bienvenue dans Mon eval :) !</title>
+</head>
+<body>
+<h1>Liste de films</h1>
+<div id="centrer">
+    <table>
+        <tr>
+            <td>Titre</td>
+            <td>Realisateur</td>
+            <td>Acteurs</td>
+            <td>Date</td>
+            <td>Genre</td>
+            <td>Editer</td>
+            <td>Supprimer</td>
+        </tr>
+        <tr>
+            {% for film in listFilms %}
+            <td>{{ film.titre }}</td>
+            <td>{{ film.realisateur }}</td>
+            <td>{{ film.acteurs }}</td>
+            <td>{{ film.date|date('d/m/Y') }}</td>
+            <td>{{ film.genre }}</td>
+            <td><a href="{{ path('wm_film_edit', {'id': film.id}) }}">edit</a></td>
+            <td><a href="{{ path('wm_film_delete', {'id': film.id}) }}">suppr</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div><br><br>
+<div id="ajout"><a href="{{ path('wm_film_ajout') }}">Ajouter</a></div>
+
+</body>
+</html>

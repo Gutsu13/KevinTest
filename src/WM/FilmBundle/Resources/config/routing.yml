@@ -1,0 +1,12 @@
+wm_film_homepage:
+    path:     /
+    defaults: { _controller: WMFilmBundle:Listing:index }
+wm_film_ajout:
+    path:     /ajout
+    defaults: { _controller: WMFilmBundle:Listing:ajout }
+wm_film_edit:
+    path:     /edit/{id}
+    defaults: { _controller: WMFilmBundle:Listing:edit }
+wm_film_delete:
+    path:     /{id}
+    defaults: { _controller: WMFilmBundle:Listing:delete }

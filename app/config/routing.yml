@@ -1,0 +1,7 @@
+wm_film:
+    resource: "@WMFilmBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
